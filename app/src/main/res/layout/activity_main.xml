@@ -45,7 +45,9 @@
         android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+        android:onClick="onAddBtnClicked"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -66,12 +68,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:layout_marginRight="8dp"
             android:hint="@string/insert_task_id"
             app:layout_constraintEnd_toStartOf="@+id/deleteBtn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+       />
 
         <com.google.android.material.button.MaterialButton
             app:cornerRadius="24dp"
@@ -83,7 +86,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/editTextTaskId"
-            app:layout_constraintEnd_toStartOf="@+id/clearBtn" />
+            app:layout_constraintEnd_toStartOf="@+id/clearBtn"
+            android:onClick="onDeleteBtnClicked"
+            />
 
         <com.google.android.material.button.MaterialButton
             app:cornerRadius="24dp"
@@ -95,6 +100,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/editTextTaskId"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:onClick="onDoneBtnClicked"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
